@@ -15,8 +15,10 @@ RUN apt-get update
 RUN apt-get install software-properties-common apt-transport-https curl unzip -y
 
 RUN mkdir /prep && chown -R ubuntu /prep
+RUN mkdir /server && chown -R ubuntu /server
 RUN mkdir /psm && chown -R ubuntu /psm
 
 COPY info.sh /psm/info.sh
+COPY logo.txt logo.txt
 
 CMD ["/bin/bash", "/psm/info.sh"]
