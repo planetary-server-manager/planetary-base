@@ -16,6 +16,8 @@ RUN apt-get install software-properties-common apt-transport-https curl unzip -y
 
 RUN mkdir /prep && chown -R ubuntu /prep
 RUN mkdir /server && chown -R ubuntu /server
+RUN mkdir /scripts && chown -R ubuntu /scripts
+RUN mkdir /backups && chown -R ubuntu /backups
 RUN mkdir /psm && chown -R ubuntu /psm
 
 COPY info.sh /psm/info.sh
