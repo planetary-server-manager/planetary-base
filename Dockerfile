@@ -9,10 +9,11 @@ ENV TIMEZONE=America/Los_Angeles \
     BACKUPS=false \
     LOGGING=false \
     MAX_PLAYERS=10 \
-    ALLOW_LIST=true
+    ALLOW_LIST=true \
+    ALLOW_LIST_MEMBERS=""
 
 RUN apt-get update
-RUN apt-get install software-properties-common apt-transport-https curl unzip -y
+RUN apt-get install software-properties-common apt-transport-https curl unzip jq -y
 
 RUN mkdir /prep && chown -R ubuntu /prep
 RUN mkdir /server && chown -R ubuntu /server
